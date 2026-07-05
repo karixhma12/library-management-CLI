@@ -48,14 +48,14 @@ updateBook({ year: 1938 });
 updateBook({ genre: "Adventure", status: "borrowed" });
 updateBook({});*/
 
-type BookCollection = Record<string,Book>;
+const booksMap = new Map<string,Book>();
 
-const books : BookCollection = {
-    "b1" : {id: 1, title: "The Hobbit", author: "JRR Tolkien", year: 1937, genre: "Fantasy", status: "available"},
-    "b2" : {id: 2, title: "Dune", author: "Frank Herbert", year: 1965, genre: "Sci-Fi", status: "available"}
-};
+booksMap.set("b1",{id: 1, title: "The Hobbit", author: "JRR Tolkien", year: 1937, genre: "Fantasy", status: "available" });
+booksMap.set("b2",{id: 2, title: "Dune", author: "Frank Herbert", year: 1965, genre: "Sci-Fi", status: "available"});
 
-console.log(books["b1"]);
+console.log(booksMap.get("b1"));
+console.log("Books size :", booksMap.size);
+
 
 
 
