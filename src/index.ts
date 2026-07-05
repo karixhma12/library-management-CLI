@@ -7,6 +7,18 @@ interface Book{
     status : string
 }
 
+interface LibraryConfig{
+    libraryName : string,
+    maxBooksPerMember : number
+}
+
+const libraryConfig : Readonly<LibraryConfig> = {
+    libraryName : "Community Library",
+    maxBooksPerMember : 5
+}
+
+console.log(libraryConfig);
+
 type BookSummary = Pick<Book, 'title' | 'author'>;
 type UpdatableFields = Pick<Book, 'title' | 'author' | 'year' | 'genre' | 'status'>;
 type UpdateBook = Partial<UpdatableFields>;

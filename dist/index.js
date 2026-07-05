@@ -1,5 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const libraryConfig = {
+    libraryName: "Community Library",
+    maxBooksPerMember: 5
+};
+console.log(libraryConfig);
 const displayBookSummary = function (book) {
     console.log(`Title : ${book.title}, Author : ${book.author}`);
 };
