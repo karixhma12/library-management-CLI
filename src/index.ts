@@ -17,7 +17,7 @@ const libraryConfig : Readonly<LibraryConfig> = {
     maxBooksPerMember : 5
 }
 
-console.log(libraryConfig);
+/*console.log(libraryConfig);
 
 type BookSummary = Pick<Book, 'title' | 'author'>;
 type UpdatableFields = Pick<Book, 'title' | 'author' | 'year' | 'genre' | 'status'>;
@@ -46,6 +46,17 @@ function updateBook(updatedBook : UpdateBook):void{
 
 updateBook({ year: 1938 });
 updateBook({ genre: "Adventure", status: "borrowed" });
-updateBook({});
+updateBook({});*/
+
+type BookCollection = Record<string,Book>;
+
+const books : BookCollection = {
+    "b1" : {id: 1, title: "The Hobbit", author: "JRR Tolkien", year: 1937, genre: "Fantasy", status: "available"},
+    "b2" : {id: 2, title: "Dune", author: "Frank Herbert", year: 1965, genre: "Sci-Fi", status: "available"}
+};
+
+console.log(books["b1"]);
+
+
 
 

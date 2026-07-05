@@ -4,24 +4,9 @@ const libraryConfig = {
     libraryName: "Community Library",
     maxBooksPerMember: 5
 };
-console.log(libraryConfig);
-const displayBookSummary = function (book) {
-    console.log(`Title : ${book.title}, Author : ${book.author}`);
+const books = {
+    "b1": { id: 1, title: "The Hobbit", author: "JRR Tolkien", year: 1937, genre: "Fantasy", status: "available" },
+    "b2": { id: 2, title: "Dune", author: "Frank Herbert", year: 1965, genre: "Sci-Fi", status: "available" }
 };
-let book1 = {
-    id: 1,
-    title: "The Hobbit",
-    author: "JRR Tolkein",
-    year: 1937,
-    genre: "Fantasy",
-    status: "available"
-};
-displayBookSummary(book1);
-displayBookSummary({ title: "Dune", author: "Frank Herbert" });
-function updateBook(updatedBook) {
-    console.log("Updating book with : ", updatedBook);
-}
-updateBook({ year: 1938 });
-updateBook({ genre: "Adventure", status: "borrowed" });
-updateBook({});
+console.log(books["b1"]);
 //# sourceMappingURL=index.js.map
