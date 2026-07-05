@@ -7,6 +7,12 @@ interface Book{
     status : string
 }
 
+type BookSummary = Pick<Book, 'title' | 'author'>;
+
+const displayBookSummary = function(book : BookSummary):void{
+    console.log(`Title : ${book.title}, Author : ${book.author}`);
+}
+
 let book1 : Book = {
     id: 1,
     title : "The Hobbit",
@@ -16,4 +22,5 @@ let book1 : Book = {
     status : "available"
 }
 
-console.log(book1);
+displayBookSummary(book1);
+displayBookSummary({title:"Dune",author:"Frank Herbert"});

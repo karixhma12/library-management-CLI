@@ -1,5 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const displayBookSummary = function (book) {
+    console.log(`Title : ${book.title}, Author : ${book.author}`);
+};
 let book1 = {
     id: 1,
     title: "The Hobbit",
@@ -8,5 +11,6 @@ let book1 = {
     genre: "Fantasy",
     status: "available"
 };
-console.log(book1);
+displayBookSummary(book1);
+displayBookSummary({ title: "Dune", author: "Frank Herbert" });
 //# sourceMappingURL=index.js.map
